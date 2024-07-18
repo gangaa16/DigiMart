@@ -430,8 +430,12 @@ const createOrder =asyncHandler(async(req,res)=>{
     })
 
   }catch{
-    throw new Error(error)
+    res.json({
+      status:false
+    })
+    // throw new Error(error)
   }
+  
 })
 
 const getMyOrders = asyncHandler(async(req,res)=>{
